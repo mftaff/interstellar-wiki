@@ -14,6 +14,11 @@
  *= require_self
  */
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.user-ctrl {
+    position: relative;
+    top: 11.5px;
+    float: right;
+}
