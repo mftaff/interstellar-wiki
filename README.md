@@ -23,3 +23,10 @@ However, much research/developmment is underway, to make this dream a reality.
 InterstellerWiki aims to become a part of this _new frontier_ by providing a central 
 collection of all known data relating to Space Travel.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Tracked Issues/features to implement at a later time:
+
+- styling - create a cosmic theme (for now the goal is to get all the parts working)

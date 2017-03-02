@@ -1,2 +1,24 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<div class="jumbotron">
+    <h1>Interstellar Wiki</h1>
+    <p>Your guide to exploring the Stars! (and beyond?)</p>
+    <p>
+        <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %> or
+        <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> today!
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Browse our selection of user provided content</h2>
+        <p>WikiStellar contains a rich library of everything you need to know about the cosmos.</p>
+    </div>    
+    <div class="col-md-4">
+        <h2>Join the community</h2>
+        <p><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> today and help add to Wikistellar.</p>
+    </div>    
+    <div class="col-md-4">
+        <h2>Explore</h2>
+        <p>Discover how the various wiki pages interact to create a web of informative data.</p>
+    </div>
+</div>

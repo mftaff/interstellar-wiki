@@ -1,0 +1,15 @@
+<h1>New Wiki</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <p>Thank you for contributing to Interstellar Wiki! Here are some guidelines:</p>
+        <ul>
+            <li>Wikis will be nested by arch-topics.</li>            <!-- to do: create these arch-topics and nest wikis within them, as well as display in wiki/index.-->
+            <li>Please try and source all claims.</li>
+            <li>See the styleguide page, for more info.</li>         <!-- to do: create a styleguide page outlining the vision of interstellar wiki pages. -->
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <%= render partial: 'form', locals: { wiki: @wiki } %>
+    </div>
+</div>
