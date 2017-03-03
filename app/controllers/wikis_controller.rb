@@ -1,10 +1,12 @@
 class WikisController < ApplicationController
+    before_action :get_wiki_by_id, only: [:show, :edit, :update, :destroy]
+    
     def index
         @wikis = Wiki.all
     end
     
     def show
-        @wiki = get_wiki_by_id
+        # @wiki = get_wiki_by_id
     end
     
     def new
@@ -25,11 +27,11 @@ class WikisController < ApplicationController
     end
     
     def edit
-        @wiki = get_wiki_by_id
+        # @wiki = get_wiki_by_id
     end
     
     def update
-        @wiki = get_wiki_by_id
+        # @wiki = get_wiki_by_id
         @wiki.assign_attributes(wiki_params)
         
         if @wiki.save
@@ -42,7 +44,7 @@ class WikisController < ApplicationController
     end
     
     def destroy
-        @wiki = get_wiki_by_id
+        # @wiki = get_wiki_by_id
         
         if @wiki.destroy
             flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
@@ -60,6 +62,6 @@ class WikisController < ApplicationController
     end
     
     def get_wiki_by_id
-        Wiki.find(params[:id])
+        @wiki = Wiki.find(params[:id])
     end
 end

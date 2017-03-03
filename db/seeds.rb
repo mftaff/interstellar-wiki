@@ -7,23 +7,25 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require 'random_data'
-user = User.new(
-    email: RandomData.random_space_email, 
-    password: 'testes', 
-    password_confirmation: 'testes'
-)
-user.skip_confirmation!
-user.save!
 
-# 5.times do
-#     user = User.new(
-#         email: RandomData.random_space_email, 
-#         password: 'testes', 
-#         password_confirmation: 'testes'
-#     )
-#     user.skip_confirmation!
-#     user.save!
-# end
+5.times do
+    user = User.new(
+        email: RandomData.random_space_email, 
+        password: 'teatea', 
+        password_confirmation: 'teatea'
+    )
+    user.skip_confirmation!
+    user.save!
+end
+
+admin_user = User.new( 
+    email: 'artgardening@gmail.com', 
+    password: 'teatea', 
+    password_confirmation: 'teatea'
+)
+admin_user.skip_confirmation!
+admin_user.save!
+
 users = User.all
 
 50.times do 
