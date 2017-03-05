@@ -17,8 +17,45 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+    color: #7d6c7a;
+    background: #0b0e15; // how do I get the image to fill the whole background...
+    background-image: url("stars-bg-big-4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+.container {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+body a {
+    color: #585d7a;
+}
+
+body a:hover {
+    text-decoration: none;
+    color: #7d6c7a;
+}
+
+body .nav li a:hover {
+    background-color: #37314b;
+}
+
+body .nav-tabs li a:hover {
+    border-color: #37314b #37314b #ddd;
+}
+
+.nav {
+    background-color: rgba(36, 33, 44, 0.9);
+}
+
 .user-ctrl {
+    color: #585d7a;
     position: relative;
+    padding-right: 1em;
     top: 11.5px;
     float: right;
 }
