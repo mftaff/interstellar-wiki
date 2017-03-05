@@ -18,10 +18,20 @@ require 'random_data'
     user.save!
 end
 
+standard_user = User.new(
+    email: 'standard@user.test', 
+    password: 'teatea', 
+    password_confirmation: 'teatea',
+    role: 'standard'
+)
+standard_user.skip_confirmation!
+standard_user.save!
+
 admin_user = User.new( 
     email: 'artgardening@gmail.com', 
     password: 'teatea', 
-    password_confirmation: 'teatea'
+    password_confirmation: 'teatea',
+    role: 'admin'
 )
 admin_user.skip_confirmation!
 admin_user.save!

@@ -20,7 +20,7 @@ Some of the catogories that this _Wiki_ aims to cover:
 As of 3/1/2017AD (by the gregarian calender) Space travel is essentially non-existant...
 However, much research/developmment is underway, to make this dream a reality.
 
-InterstellerWiki aims to become a part of this _new frontier_ by providing a central 
+InterstellarWiki aims to become a part of this _new frontier_ by providing a central 
 collection of all known data relating to Space Travel.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
