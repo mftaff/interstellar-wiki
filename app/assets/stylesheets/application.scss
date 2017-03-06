@@ -32,7 +32,9 @@ body {
 }
 
 body a {
-    color: #585d7a;
+    // color: #88859a;
+    color: #777a89;
+    // color: #585d7a;
 }
 
 body a:hover {
@@ -58,4 +60,40 @@ body .nav-tabs li a:hover {
     padding-right: 1em;
     top: 11.5px;
     float: right;
+}
+
+.btn-danger {
+    color: #b7653e;
+    background-color: #7b3a1b;
+    border-color: #7b3a1b;
+}
+
+.btn-danger:hover {
+    color: #bf6f49;
+    background-color: #923c13;
+    border-color: #923c13;
+}
+
+.btn-danger:active {
+    color: #bf6f49;
+    background-color: #923c13;
+    border-color: #923c13;
+}
+
+.btn-success {
+    color: #81b76c;
+    background-color: #367536;
+    border-color: #367536;
+}
+
+.btn-success:hover {
+    color: #80d580;
+    background-color: #449d44;
+    border-color: #449d44;
+}
+
+.btn-success:active {
+    color: #80d580;
+    background-color: #449d44;
+    border-color: #449d44;
 }
