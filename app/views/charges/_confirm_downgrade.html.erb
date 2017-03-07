@@ -1,0 +1,10 @@
+<br>
+<div class="jumbotron">
+    <h2>You are currently a Premium member.</h2>
+    <p>This gives you access to private wikis.</p>
+    <p>Would you  like to downgrade your account to standard?</p>
+    <p>
+        <%= link_to "Yes, Downgrade me", downgrade_path, :class => 'btn btn-danger'  %>
+        <%= link_to "Nope!", root_path, :class => 'btn btn-success'  %>
+    </p>
+</div>

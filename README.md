@@ -29,4 +29,5 @@ collection of all known data relating to Space Travel.
 
 Tracked Issues/features to implement at a later time:
 
-- styling - create a cosmic theme (for now the goal is to get all the parts working)
+- add tags (on home page have explore link to list of tags)
+- add broad catogories (on home page have browse link to list of catogories)

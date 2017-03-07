@@ -1,0 +1,5 @@
+<% if wiki.private? %>
+    <%= image_tag 'white-key.png', size: '21x14', alt: 'private', class: 'lock-key-icon' %>
+<% else %>
+    <%= image_tag 'open-door.png', size: '14x21', alt: ' public', class: 'open-door-icon' %>
+<% end %>

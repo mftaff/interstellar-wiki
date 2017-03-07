@@ -1,4 +1,14 @@
-<%= form_tag charges_path do %>
-    <h4>Upgrade your account now!</h4>
-    <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%= @stripe_btn_data[:key] %>" data-amount="<%= @stripe_btn_data[:amount] %>" data-description="<%= @stripe_btn_data[:description] %>"></script>
-<% end %> 
+<% if current_user.premium? %>
+    <%= render partial: 'confirm_downgrade' %>
+<% else %>
+    <%= form_tag charges_path do %>
+        <br>
+        <div class="jumbotron">
+            <h2>You are currently a standard member.</h2>
+            <p>To gain access to private wikis you must upgrade your account.</p>
+            <p>For just $7.99 you can upgrade to <strong><i>Premium!</i></strong> Would you  like to?</p>
+            <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%= @stripe_btn_data[:key] %>" data-amount="<%= @stripe_btn_data[:amount] %>" data-description="<%= @stripe_btn_data[:description] %>"></script>
+            <%= link_to "Not right now.", root_path, :class => 'btn'  %>        
+        </div>
+    <% end %> 
+<% end %>

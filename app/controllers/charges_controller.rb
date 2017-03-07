@@ -14,7 +14,7 @@ class ChargesController < ApplicationController
         
         current_user.premium!
         
-        flash[:notice] = "Thank you for your subscription!\nYou may now reap the benifits that your Premium status has to offer!"
+        flash[:notice] = "Thank you for your subscription! You may now reap the benifits that your Premium status has to offer!"
         
         redirect_to root_path
         
@@ -24,10 +24,30 @@ class ChargesController < ApplicationController
     end
     
     def new
-        @stripe_btn_data = {
-            key: "#{Rails.configuration.stripe[:publishable_key] }",
-            description: "Premium Subscription - #{current_user.email}",
-            amount: Amount.default
-        }
+        unless current_user.admin?
+            @stripe_btn_data = {
+                key: "#{Rails.configuration.stripe[:publishable_key] }",
+                description: "Premium Subscription - #{current_user.email}",
+                amount: Amount.default
+            }
+        else           
+            flash[:alert] = "As an admin you are granted full permissions, there is no need to upgrade."
+            redirect_to root_path
+        end
+    end
+    
+    def downgrade
+        if current_user.premium?
+            current_user.standard!
+            
+            flash[:notice] = "Your account has successfully been downgraded. We are glad to have been able to help you with this."
+            redirect_to root_path
+        elsif current_user.admin?
+            flash[:alert] = "As an admin you are granted full permissions, and downgrading is not posible."
+            redirect_to root_path
+        else
+            flash[:alert] = "Sorry, that action cannot be completed with your current membership status."
+            redirect_to root_path
+        end
     end
 end

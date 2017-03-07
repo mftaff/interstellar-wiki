@@ -4,7 +4,7 @@
 <% end %>
 <% if current_user.premium? %>
     Signed in as: 
-    <img src="../../assets/images/premium-icon.png" alt="Premium" height="21" width="21">
+    <%= link_to image_tag("premium-icon.png", size: "21", alt: "Premium"), new_charge_path %>
 <% end %>
 <% if current_user.standard? %>
     <% unless request.env['PATH_INFO'] == new_charge_path %>
