@@ -42,6 +42,11 @@ body a:hover {
     color: #7d6c7a;
 }
 
+body a:active {
+    text-decoration: none;
+    color: #7d6c7a;
+}
+
 body .nav li a:hover {
     background-color: #37314b;
 }
@@ -96,4 +101,25 @@ body .nav-tabs li a:hover {
     color: #80d580;
     background-color: #449d44;
     border-color: #449d44;
+}
+
+.upgrade-btn {
+    color: #c3bf29;
+    padding: 1px;
+    border-radius: 10%;
+    background-color: rgba(128, 0, 128, 0.5);
+}
+
+.upgrade-btn:hover {
+    color: #e8e22c;
+    padding: 1px;
+    border-radius: 20%;
+    background-color: rgba(128, 0, 128, 0.6);
+}
+
+.upgrade-btn:active {
+    color: #e8e22c;
+    padding: 1px;
+    border-radius: 20%;
+    background-color: rgba(128, 0, 128, 0.6);
 }

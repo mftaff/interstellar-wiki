@@ -6,6 +6,7 @@ class WikisController < ApplicationController
     end
     
     def show
+        authorize @wiki
     end
     
     def new
@@ -15,6 +16,7 @@ class WikisController < ApplicationController
     
     def create
         @wiki = Wiki.new(wiki_params)
+        @wiki.private ||= 'false'
         @wiki.user = current_user
         
         authorize @wiki
