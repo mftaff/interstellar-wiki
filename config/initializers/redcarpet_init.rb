@@ -1,0 +1,1 @@
+$markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, fenced_code_block: true, disable_indented_code_blocks: true, strikethrough: true, superscript: true, tables: true)

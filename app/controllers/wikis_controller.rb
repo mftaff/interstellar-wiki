@@ -38,7 +38,7 @@ class WikisController < ApplicationController
         authorize @wiki
         
         if @wiki.save
-            flash[:notice] = "#{@wiki.title} was updated successfully!"
+            flash[:notice] = "Wiki successfully updated!"
             redirect_to @wiki 
         else
             flash.now[:alert] = "There was an error saving your changes. Please try again."
