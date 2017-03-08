@@ -40,14 +40,14 @@ class ChargesController < ApplicationController
         if current_user.premium?
             current_user.standard!
             
+            Wiki.where(user_id: current_user.id).update_all(private: 'false')
+            
             flash[:notice] = "Your account has successfully been downgraded. We are glad to have been able to help you with this."
-            redirect_to root_path
         elsif current_user.admin?
             flash[:alert] = "As an admin you are granted full permissions, and downgrading is not posible."
-            redirect_to root_path
         else
             flash[:alert] = "Sorry, that action cannot be completed with your current membership status."
-            redirect_to root_path
         end
+        redirect_to root_path
     end
 end
