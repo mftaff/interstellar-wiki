@@ -13,3 +13,5 @@
         <%= render partial: 'form', locals: { wiki: @wiki } %>
     </div>
 </div>
+
+<%= link_to "Manage Collaborators", wiki_collaborators_path(@wiki) %>
