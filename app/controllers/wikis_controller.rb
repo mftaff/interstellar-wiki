@@ -2,8 +2,8 @@ class WikisController < ApplicationController
     before_action :get_wiki_by_id, only: [:show, :edit, :update, :destroy]
     
     def index
-        @wikis = Wiki.all
-        authorize @wikis        # this may be incorrect. @wiki might be right or nohing
+        @wikis = policy_scope(Wiki)
+        authorize Wiki    
     end
     
     def show
@@ -49,7 +49,7 @@ class WikisController < ApplicationController
     def destroy
         authorize @wiki
         if @wiki.destroy
-            flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
+            flash[:notice] = "Wiki successfully deleted."
             redirect_to wikis_path
         else
             flash.now[:alert] = "There was an error deleting the post."

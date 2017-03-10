@@ -27,6 +27,15 @@ standard_user = User.new(
 standard_user.skip_confirmation!
 standard_user.save!
 
+premium_user = User.new(
+    email: 'premium@user.test', 
+    password: 'teatea', 
+    password_confirmation: 'teatea',
+    role: 'premium'
+)
+premium_user.skip_confirmation!
+premium_user.save!
+
 admin_user = User.new( 
     email: 'artgardening@gmail.com', 
     password: 'teatea', 
