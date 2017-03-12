@@ -10,7 +10,7 @@
         <% @users.each do |user| %>
             <% unless user == @wiki.user %>
                 <tr>
-                    <td><%= user.email %></td>
+                    <td><%= user.username %></td>
                     <td>
                         <% if @wiki.users.include?(user) %>
                             <%= link_to "Remove as Collaborator", [@wiki, @wiki.collaborator_for(user)], method: :delete, class: "btn btn-danger" %>

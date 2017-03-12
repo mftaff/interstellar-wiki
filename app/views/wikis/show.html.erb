@@ -2,7 +2,7 @@
     <h1><%= $markdown.render(@wiki.title).html_safe %></h1>
     <%= render partial: 'privacy_icon', locals: {wiki: @wiki} %>
     <small>
-        originally created <%= time_ago_in_words(@wiki.created_at) %> ago by <%= @wiki.user.email %>
+        originally created <%= time_ago_in_words(@wiki.created_at) %> ago by <%= @wiki.user.username %>
     </small>
     
 </div>

@@ -10,6 +10,7 @@ require 'random_data'
 
 5.times do
     user = User.new(
+        username: RandomData.random_space_username,
         email: RandomData.random_space_email, 
         password: 'teatea', 
         password_confirmation: 'teatea'
@@ -19,6 +20,7 @@ require 'random_data'
 end
 
 standard_user = User.new(
+    username: 'standard_user',
     email: 'standard@user.test', 
     password: 'teatea', 
     password_confirmation: 'teatea',
@@ -28,6 +30,7 @@ standard_user.skip_confirmation!
 standard_user.save!
 
 premium_user = User.new(
+    username: 'premium_user',
     email: 'premium@user.test', 
     password: 'teatea', 
     password_confirmation: 'teatea',
@@ -37,7 +40,8 @@ premium_user.skip_confirmation!
 premium_user.save!
 
 admin_user = User.new( 
-    email: 'artgardening@gmail.com', 
+    username: 'admin_user',
+    email: 'admin@user.test', 
     password: 'teatea', 
     password_confirmation: 'teatea',
     role: 'admin'

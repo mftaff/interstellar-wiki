@@ -133,6 +133,10 @@ input {
     border-radius: 3%;
 }
 
+input:focus {
+    outline-color: rgb(183, 140, 127) ;
+}
+
 .actions input {
     margin-top: 5px;
 }

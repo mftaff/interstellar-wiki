@@ -34,5 +34,6 @@ Tracked Issues/features to implement at a later time:
 - fix policy so that collaborators only exist for private posts
 - fix collaborators index so that admins are displayed.
 - add validation checks for title/body etc.
+- add validation checks for usernames
 - DRYout manage vs view collab based on permissions (wikis/edit.html.erb and collaborators/index.html.erb)
 - add markdown preview when editing wikis.

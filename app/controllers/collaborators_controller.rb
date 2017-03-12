@@ -3,6 +3,7 @@ class CollaboratorsController < ApplicationController
   
   def index
     @users = User.all
+    authorize @wiki.collaborators.new(user_id: params[:user_id])
   end
   
   def create
@@ -10,7 +11,7 @@ class CollaboratorsController < ApplicationController
     
     authorize @collaborator
     if @collaborator.save
-      flash[:notice] = "#{@collaborator.user.email} was added as a collaborator."
+      flash[:notice] = "#{@collaborator.user.username} was added as a collaborator."
     else
       flash[:alert] = "There was a problem while saving a new collaborator. Please try again."
     end
@@ -22,7 +23,7 @@ class CollaboratorsController < ApplicationController
     
     authorize @collaborator
     if @collaborator.destroy
-      flash[:notice] = "#{@collaborator.user.email} was removed from being a collaborator."
+      flash[:notice] = "#{@collaborator.user.username} was removed from being a collaborator."
     else
       flash[:alert] = "There was a problem removing a collaborator. Please try again."
     end

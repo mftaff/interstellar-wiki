@@ -3,8 +3,8 @@ module RandomData
     @@grammer_words = "though although even though while if only if unless until provided that assuming that even if lest than rather than whether as_much_as whereas after as_long_as as_soon_as before by_the_time now_that once since till until when whenever while because since so that why that what whatever which whichever who whoever whom whomever whose how as though as if where wherever it and or but maybe I he her she him them they also besides furthermore likewise moreover however nevertheless nonetheless still conversely instead otherwise rather accordingly consequently hence meanwhile then therefore thus".split(' ').map{|w| (w.include? '_') ? w.gsub!('_', ' ') : w}
     @@names = "Rodney Drozd  Dyan Kinkead  Patria Ropp  Nicolette Wozniak  Peter Erb  Prudence Jent  Paola Cazarez  Lorenzo Meeker  Ardath Balke  Nichol Kuhlmann  Tawna Mcdole  Faviola Kaminsky  Kimberlie Ney  Genna Zweifel  Loan Greenwald  Nakita Munsey  Danica Dials  Stephan Ricken  Tandra Torres".split(' ')
     
-    def self.random_space_name
-        "#{@@names.sample} #{@@names.sample}"
+    def self.random_space_username
+        "#{@@names.sample}#{@@names.sample}"
     end
     
     def self.random_space_email

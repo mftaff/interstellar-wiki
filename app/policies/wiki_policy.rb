@@ -20,7 +20,7 @@ class WikiPolicy < ApplicationPolicy
   end
 
   def update?
-    (user.present? && !record.private) || user.admin? || user.id == record.user_id || record.users.include?(user)
+    (user.present? && !record.private?) || user.admin? || user.id == record.user_id || record.users.include?(user)
   end
 
   def edit?

@@ -1,6 +1,6 @@
 class CollaboratorPolicy < ApplicationPolicy
   def index?
-    # record.private? && ( user.admin? || user.id == record.user_id || record.users.include?(user) )
+    record.wiki.private? && ( user.admin? || user.id == record.wiki.user_id || record.users.include?(user) )
   end
 
   def create?
@@ -12,8 +12,20 @@ class CollaboratorPolicy < ApplicationPolicy
   end
   
   class Scope < Scope
-    def resolve
-      scope
-    end
+    # attr_reader :user, :scope
+    
+    # def initialize(user, scope)
+    #   @user = user
+    #   @scope = scope
+    # end
+    
+    # def resolve
+    #   users = []
+      
+    #   if scope.private? && ( user.admin? || user.id == scope.wiki.user_id || scope.users.include?(user) )
+    #     users = User.all
+    #   end
+    #   users
+    # end
   end
 end
