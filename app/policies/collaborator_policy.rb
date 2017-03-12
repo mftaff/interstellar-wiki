@@ -12,20 +12,8 @@ class CollaboratorPolicy < ApplicationPolicy
   end
   
   class Scope < Scope
-    # attr_reader :user, :scope
-    
-    # def initialize(user, scope)
-    #   @user = user
-    #   @scope = scope
-    # end
-    
-    # def resolve
-    #   users = []
-      
-    #   if scope.private? && ( user.admin? || user.id == scope.wiki.user_id || scope.users.include?(user) )
-    #     users = User.all
-    #   end
-    #   users
-    # end
+    def resolve
+      scope
+    end
   end
 end

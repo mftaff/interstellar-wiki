@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  pundit:
+    default: "You do not have permission to do that..."
+    collaborator_policy: 
+        index?: "This wiki must be private, and you must have authorization in order to view/manage collaborators."
