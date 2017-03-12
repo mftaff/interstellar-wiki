@@ -6,7 +6,7 @@
     <small>Downgrading will cause all your wikis to become public.</small>
     <br></br>
     <p>
-        <%= link_to "Yes, Downgrade me", downgrade_path, :class => 'btn btn-danger'  %>
+        <%= link_to "Yes, Downgrade me", downgrade_path, :class => 'btn btn-danger', data: { confirm: "Are you sure? This action cannot be undone." }  %>
         <%= link_to "Nope!", root_path, :class => 'btn btn-success'  %>
     </p>
 </div>
