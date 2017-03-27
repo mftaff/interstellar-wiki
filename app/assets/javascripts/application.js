@@ -15,3 +15,22 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+var blocmetrics = {};
+
+blocmetrics.report = function(eventName) {
+    var event = {event: { name: eventName}};
+    var request = new XMLHttpRequest();
+    
+    request.open("POST", "https://blocmetrics-mftaff.c9users.io:8080/api/events", true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify(event));
+};
+
+$( document ).ready(function() {
+    blocmetrics.report('page load');
+});
+
+$('.track-new-wiki').live('click', function() {
+    blocmetrics.report('new_wiki');
+});
