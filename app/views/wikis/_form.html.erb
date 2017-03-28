@@ -15,10 +15,6 @@
         </div>    
     <% end %> 
     <div class="form-group">
-        <% if action_name == "new" %>
-            <%= f.submit "Save", class: 'btn btn-success track-new-wiki' %>
-        <% else %>
-            <%= f.submit "Save", class: 'btn btn-success' %>
-        <% end %>
+        <%= f.submit "Save", class: 'btn btn-success' %>
     </div>
 <% end %>

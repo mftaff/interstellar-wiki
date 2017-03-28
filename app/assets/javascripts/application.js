@@ -29,8 +29,8 @@ blocmetrics.report = function(eventName) {
 
 $( document ).ready(function() {
     blocmetrics.report('page load');
-});
 
-$('.track-new-wiki').live('click', function() {
-    blocmetrics.report('new_wiki');
+    $('#new_wiki').submit(function() {
+       blocmetrics.report('new wiki form submit'); 
+    });
 });
